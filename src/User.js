@@ -6,7 +6,7 @@ export default function User(){
     function inserirNome(){
         let novoNome = prompt("Qual é o nome que deseja colocar?");
 
-        if(novoNome === ""){
+        if(novoNome === "" || novoNome === null){
             return;
         }
         else{
@@ -20,7 +20,7 @@ export default function User(){
     const [imagem, setImagem] = React.useState("assets/catanacomics.svg")
     function inserirImagem(){
         let novaImagem = prompt("Coloque o link da imagem aqui")
-        if(novaImagem === ""){
+        if(novaImagem === "" || novaImagem === null){
             return
         }
         else{
