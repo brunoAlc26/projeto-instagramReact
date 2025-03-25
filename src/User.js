@@ -15,6 +15,8 @@ export default function User(){
 
     }
 
+    // links de teste
+    // https://preview.redd.it/what-is-your-favorite-detailed-spongebob-frame-v0-poiquatfzxoc1.jpeg?auto=webp&s=ba98e234c9ae6f96bce797757e417b4cf7c6d666
     const [imagem, setImagem] = React.useState("assets/catanacomics.svg")
     function inserirImagem(){
         let novaImagem = prompt("Coloque o link da imagem aqui")
