@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+
 export default function Posts() {
   const [posts, setPosts] = useState([
     {
@@ -69,7 +70,7 @@ export default function Posts() {
 
   function apertarSalvar(i) {
     const post = [...posts];
-
+  
     if (post[i].bookmarkIcon === "bookmark-outline") {
       post[i].bookmarkIcon = "bookmark";
       post[i].bookmarkColor = "black";
@@ -77,9 +78,10 @@ export default function Posts() {
       post[i].bookmarkIcon = "bookmark-outline";
       post[i].bookmarkColor = "black";
     }
-
+  
     setPosts(post);
   }
+  
 
   return (
     <ul class="posts">
@@ -112,8 +114,8 @@ export default function Posts() {
               </div>
               <div>
                 <ion-icon
-                  onClick={() => apertarSalvar(i)}
-                  name={post.bookmarkIcon}
+                  onClick={() => apertarSalvar(i)} 
+                  name={post.bookmarkIcon} 
                   style={{ color: post.bookmarkColor, cursor: "pointer" }}
                 ></ion-icon>
               </div>
