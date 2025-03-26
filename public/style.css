@@ -239,14 +239,14 @@ body {
   color: #262626;
 }
 
-.sidebar .sugestoes .titulo {
+.sidebar .suggestions .titulo {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 0 14px;
 }
 
-.sidebar .sugestoes .sugestao {
+.sidebar .suggestions .suggestion {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -255,28 +255,28 @@ body {
   margin-bottom: 16px;
 }
 
-.sidebar .sugestoes .sugestao .usuario {
+.sidebar .suggestions .suggestion .usuario {
   display: flex;
 }
 
-.sidebar .sugestoes img {
+.sidebar .suggestions img {
   width: 32px;
   height: 32px;
 }
 
-.sidebar .sugestoes .seguir {
+.sidebar .suggestions .seguir {
   color: #139EF2;
   font-weight: 600;
 }
 
-.sidebar .sugestoes .sugestao .usuario .texto {
+.sidebar .suggestions .suggestion .usuario .texto {
   margin-left: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.sidebar .sugestoes .sugestao .usuario .texto :last-child {
+.sidebar .suggestions .suggestion .usuario .texto :last-child {
   color: #8E8E8E;
   font-weight: 400;
 }

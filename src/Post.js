@@ -2,9 +2,9 @@ import React, { useState } from "react";
 
 export default function Posts() {
   const [posts, setPosts] = useState([
-    { 
-      usuario: "assets/meowed.svg", 
-      nome: "meowed", 
+    {
+      usuario: "assets/meowed.svg",
+      nome: "meowed",
       imagem: "assets/gato-telefone.svg",
       curtidas: 101523,
       curtidoTambem_imagem: "assets/respondeai.svg",
@@ -46,12 +46,12 @@ export default function Posts() {
   function apertarLike(i) {
     const post = [...posts];
 
-    if (!post[i].like) { 
+    if (!post[i].like) {
       post[i].like = true;
       post[i].curtidas += 1;
       post[i].icon = "heart";
       post[i].color = "red";
-    } else { 
+    } else {
       post[i].like = false;
       post[i].curtidas -= 1;
       post[i].icon = "heart-outline";
@@ -82,46 +82,46 @@ export default function Posts() {
   }
 
   return (
-    <ul className="posts">
+    <ul class="posts">
       {posts.map((post, i) => (
-        <li className="post" key={i}>
-          <div className="topo">
-            <div className="usuario">
+        <li class="post" key={i}>
+          <div class="topo">
+            <div class="usuario">
               <img src={post.usuario} alt={post.nome} />
               {post.nome}
             </div>
-            <div className="acoes">
+            <div class="acoes">
               <ion-icon name="ellipsis-horizontal"></ion-icon>
             </div>
           </div>
 
-          <div className="conteudo">
+          <div class="conteudo">
             <img src={post.imagem} onClick={() => apertarLikeImagem(i)} alt="post" />
           </div>
 
-          <div className="fundo">
-            <div className="acoes">
+          <div class="fundo">
+            <div class="acoes">
               <div>
-                <ion-icon 
-                  onClick={() => apertarLike(i)} 
-                  name={post.icon} 
+                <ion-icon
+                  onClick={() => apertarLike(i)}
+                  name={post.icon}
                   style={{ color: post.color, cursor: "pointer" }}
                 ></ion-icon>
                 <ion-icon name="chatbubble-outline"></ion-icon>
                 <ion-icon name="paper-plane-outline"></ion-icon>
               </div>
               <div>
-                <ion-icon 
-                  onClick={() => apertarSalvar(i)} 
-                  name={post.bookmarkIcon} 
+                <ion-icon
+                  onClick={() => apertarSalvar(i)}
+                  name={post.bookmarkIcon}
                   style={{ color: post.bookmarkColor, cursor: "pointer" }}
                 ></ion-icon>
               </div>
             </div>
 
-            <div className="curtidas">
+            <div class="curtidas">
               <img src={post.curtidoTambem_imagem} alt={post.curtidoTambem_nome} />
-              <div className="texto">
+              <div class="texto">
                 Curtido por <strong>{post.curtidoTambem_nome}</strong> e <strong>outras {post.curtidas.toLocaleString()} pessoas</strong>
               </div>
             </div>
