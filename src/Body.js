@@ -1,6 +1,6 @@
 import SideBar from "./SideBar"
 import Stories from "./Stories"
-import Posts from "./Post"
+import Posts from "./Posts"
 
 export default function Body(){
     return(

@@ -5,31 +5,26 @@ export default function Suggestions() {
         { nome: "razoesparaacreditar", imagem: "assets/razoesparaacreditar.svg", razao: "Novo no Instagram", seguir: "Seguir" },
         { nome: "adorable_animals", imagem: "assets/adorable_animals.svg", razao: "Segue você", seguir: "Seguir" },
         { nome: "smallcutecats", imagem: "assets/smallcutecats.svg", razao: "Segue você", seguir: "Seguir" }
-    ]
-
+    ];
 
     return (
-        <ul class="suggestions">
-            <div class="titulo">
+        <ul className="suggestions">
+            <div className="titulo">
                 Sugestões para você
                 <div>Ver tudo</div>
             </div>
-            {suggestions.map(suggestions => (
-                <li class="suggestions">
-                    <div class="suggestions">
-                        <div class="suggestion">
-                            <div class="usuario">
-                                <img src={suggestions.imagem} alt={suggestions.nome} />
-                                <div class="texto">
-                                    <div class="nome">{suggestions.nome}</div>
-                                    <div class="razao">{suggestions.razao}</div>
-                                </div>
-                            </div>
-                            <div class="seguir">{suggestions.seguir}</div>
+            {suggestions.map((suggestion, index) => (
+                <li className="suggestion" key={index}>
+                    <div className="usuario">
+                        <img src={suggestion.imagem} alt={suggestion.nome} />
+                        <div className="texto">
+                            <div className="nome">{suggestion.nome}</div>
+                            <div className="razao">{suggestion.razao}</div>
                         </div>
                     </div>
+                    <div className="seguir">{suggestion.seguir}</div>
                 </li>
             ))}
         </ul>
-    )
+    );
 }
